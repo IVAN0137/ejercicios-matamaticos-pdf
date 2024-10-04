@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Problemas/CSS/index.css"> <!-- Enlace a los estilos CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- Importa jsPDF -->
+    <title>Generador de Problemas de Matemáticas</title>
+</head>
+<body>
+    <header>
+        <h1>Generador de Problemas de Matemáticas</h1>
+    </header>
+
+    <div class="config">
+        <fieldset>
+            <legend>Configura tus ejercicios</legend>
+
+            <!-- Área para ingresar problemas personalizados -->
+            <label for="customProblems">Ejercicios personalizados:</label>
+            <textarea id="customProblems" rows="4" placeholder="Ingresa tus ejercicios aquí, uno por línea. Por ejemplo: 1 * 2 "></textarea>
+
+            <!-- Configuración para ejercicios aleatorios -->
+            <label for="numRandomProblems">Número de ejercicios aleatorios:</label>
+            <input type="number" id="numRandomProblems" value="5" min="1" max="20">
+
+            <label for="operations">Selecciona operaciones:</label>
+            <label><input type="checkbox" id="add" checked> Sumas</label>
+            <label><input type="checkbox" id="sub" checked> Restas</label>
+            <label><input type="checkbox" id="mul" checked> Multiplicaciones</label>
+            <label><input type="checkbox" id="div" checked> Divisiones</label>
+
+            <button id="generateBtn">Generar PDF</button>
+        </fieldset>
+    </div>
+
+    <div id="problems"></div>
+
+    <script src="../Problemas/JS/index.js"></script> <!-- Enlace a la lógica JavaScript -->
+</body>
+</html>
